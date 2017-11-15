@@ -1,18 +1,14 @@
 <html>
     <head>
-        <title>All Product</title>
+        <title>All Products</title>
     </head>
     <body>
-        <h1><u>All Products:</u></h1>
+        <h1>Product List</h1>
         <% console.log(products) %>
-    <% for(var i=0; i<products.length; i++) { %>
-    <h1> (No. <%=(i+1)%>) Products Name: <%= products[i].name %> </h1>
-     <h1> Products ID: <%= products[i]._id %> </h1>
-    <p> <h3>Products User: <%= products[i].user%> </h3>
-    </p>
-    <h3>Products description: <%= products[i].description%></h3>
-    <h3>Products price: <%= products[i].price%></h3>
-     <h3>Products quantity: <%= products[i].quantity%></h3>
-    <% } %>
+          <% for(var i=0; i<products.length; i++) { %>
+          <h1> <a href="/products/<%=products[i]._id %>">
+            <%= products[i].name %> </a> </h1>
+            
+            <% } %>
     </body>
 </html>
