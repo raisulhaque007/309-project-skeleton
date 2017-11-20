@@ -12,14 +12,15 @@ var ProductSchema = {
   description: {
     type: String,
     default: '',
-    trim: true
+    trim: true,
 
   },
   
   price: {
     type: Number,
-    default: '',
-    required: 'Price required'
+    //default: '',
+    trim: true,
+    required: 'price required'
 
   },
   
@@ -39,7 +40,7 @@ var ProductSchema = {
     type: Date,
     default: Date.now
   }
-};
+}
 
 var Product = mongoose.model('Product', ProductSchema, 'products');
 module.exports = Product;
